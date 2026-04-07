@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | UDHAYAM JOB SERVICES LTD</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky">
+        <div class="nav-container">
+            <div class="logo-group">
+                <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
+                <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="upload-cv.html">Upload CV</a></li>
+                <li><a href="index.html#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="section-padding" style="background: #fdfdfd; padding-top: 150px;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for staffing solutions or any inquiries.</p>
+            </div>
+
+            <div class="contact-page-container">
+                <!-- Contact Form -->
+                <div class="contact-form" data-aos="fade-right">
+                    <form id="contactUsForm">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" class="form-control" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" class="form-control" required placeholder="email@address.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" class="form-control" placeholder="+44 7359 941485">
+                        </div>
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea class="form-control" style="height: 150px;" placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; height: 55px; background: #D4AF37; color: #fff;">Send Message</button>
+                    </form>
+                    <div id="contactSuccess" class="success-message">
+                        <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. A member of our team will get back to you shortly.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div class="contact-info-column" data-aos="fade-left">
+                    <div class="contact-info-box">
+                        <h3 class="serif" style="margin-bottom: 30px; font-size: 1.8rem; color: #0A2E5C;">Our
+                            Information</h3>
+
+                        <div class="info-item">
+                            <a href="tel:+447359941485"><i class="fa-solid fa-phone"></i></a>
+                            <div>
+                                <h4 style="color: #0A2E5C;">Phone</h4>
+                                <p><a href="tel:+447359941485">+44 7359 941485</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <a href="mailto:udhayamjobserviceshr@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                            <div>
+                                <h4 style="color: #0A2E5C;">Email</h4>
+                                <p><a href="mailto:udhayamjobserviceshr@gmail.com">udhayamjobserviceshr@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4 style="color: #0A2E5C;">Office Location</h4>
+                                <p>London, United Kingdom</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-connect">
+                            <h4 style="margin-bottom: 20px; color: #0A2E5C;">Connect With Us</h4>
+                            <a href="https://www.instagram.com/udhayamjobservices?igsh=MWR6b2V1N2szbWtobw=="
+                                target="_blank" class="instagram-btn">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Follow us on Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid #eee;">
+        <p>&copy; 2026 PRUTHVI RKR. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Form submission simulation
+        document.getElementById('contactUsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('contactSuccess').style.display = 'block';
+        });
+
+        // Sticky Navbar logic
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+
+</html>

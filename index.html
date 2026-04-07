@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDHAYAM JOB SERVICES LTD | Elite Hospitality Staffing Solutions London</title>
+    <meta name="description"
+        content="UDHAYAM JOB SERVICES LTD is London's premier hospitality staffing agency, providing luxury restaurants with exceptional chefs, front-of-house staff, and verified professionals.">
+    <link rel="stylesheet" href="index.css?v=1.2">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Vision & Mission Scroll Animation - Kept here for ease of entry tracking */
+        #vision-mission .vm-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: background-color 0.35s ease, color 0.35s ease, transform 0.35s ease, opacity 0.6s ease-out;
+            will-change: transform, background-color, color;
+        }
+
+        #vision-mission .vm-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #vision-mission .vm-icon {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: color 0.35s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+        }
+
+        #vision-mission .vm-card.is-visible .vm-icon {
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0.3s;
+        }
+
+        #vision-mission .vm-card:hover,
+        #vision-mission .vm-card:active {
+            background-color: #0A2E5C !important;
+            color: #D4AF37 !important;
+            transform: translateY(-6px) !important;
+        }
+
+        #vision-mission .vm-card:hover .vm-icon,
+        #vision-mission .vm-card:hover h3,
+        #vision-mission .vm-card:hover p {
+            color: inherit !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo-group">
+                <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
+                <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="upload-cv.html">Upload CV</a></li>
+                <li><a href="index.html#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-zoom"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Elite Hospitality Staffing Solutions in London</h1>
+            <p>Connecting Restaurants with Exceptional Talent.</p>
+
+            <div class="btn-group">
+                <a href="index.html#contact-us" class="btn btn-primary">Hire Exceptional Staff</a>
+                <a href="upload-cv.html" class="btn btn-secondary">Apply for Opportunities</a>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats">
+                <div class="stat-item">
+                    <h3 class="counter">500+</h3>
+                    <p>Skilled Professionals</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">100+</h3>
+                    <p>Restaurant Partners</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">24/7</h3>
+                    <p>Support</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">Verified</h3>
+                    <p>Workforce</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="section-padding" style="background: #f8f8f8;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="serif">Our Vision & Mission</h2>
+                <p>The foundation of our commitment to hospitality excellence.</p>
+            </div>
+
+            <div class="vision-mission-grid">
+                <!-- Vision Card -->
+                <div class="vm-card animate-on-scroll">
+                    <div class="vm-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="serif">Vision</h3>
+                    <p>“To shape a future where exceptional service is powered by empowered people and seamless hiring.”
+                    </p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="vm-card animate-on-scroll">
+                    <div class="vm-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="serif">Mission</h3>
+                    <p>“Bridging the gap between hospitality businesses and skilled professionals through fast,
+                        reliable, and fair staffing solutions that elevate guest experiences.”</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Us</h2>
+                <p>Delivering refined workforce solutions to restaurants and hospitality establishments across the UK.
+                </p>
+            </div>
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 50px;">
+                <div data-aos="fade-right">
+                    <h2 class="serif" style="font-size: 2.5rem; margin-bottom: 25px; line-height: 1.2;">Excellence in
+                        Hospitality. Refined for London.</h2>
+                    <p style="font-size: 1.15rem; color: #555; margin-bottom: 30px;">UDHAYAM JOB SERVICES LTD is a
+                        London-based luxury hospitality staffing agency. We specialize in identifying, screening, and
+                        supplying the most talented professionals for the UK's most prestigious establishments.</p>
+                    <div style="padding-top: 20px; border-left: 3px solid #D4AF37; padding-left: 20px;">
+                        <h4 style="margin-bottom: 10px; color: #D4AF37;">Our Core Promise</h4>
+                        <p>To provide high-end recruitment that brands can trust, ensuring consistent, premium service
+                            in every shift.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left"
+                    style="background: var(--accent-gold); height: 450px; border-radius: 8px; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800"
+                        alt="Hospitality Professional"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding" style="background: #fdfdfd;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Premium Services</h2>
+                <p>Curated workforce solutions for the hospitality elite.</p>
+            </div>
+            <h3 class="serif service-category-title" data-aos="fade-right">Kitchen Professionals</h3>
+            <div class="services-grid">
+                <!-- Chef -->
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3 class="serif">Chef</h3>
+                    <p>Highly experienced culinary leaders capable of managing professional kitchens and delivering
+                        exceptional dining standards.</p>
+                </div>
+                <!-- Commis Chef -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-bowl-rice"></i>
+                    <h3 class="serif">Commis Chef</h3>
+                    <p>Skilled junior chefs supporting food preparation, station organization, and maintaining kitchen
+                        efficiency.</p>
+                </div>
+                <!-- Prep Chef -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-mortar-pestle"></i>
+                    <h3 class="serif">Prep Chef</h3>
+                    <p>Detail-oriented preparation specialists ensuring ingredients and mise en place are ready for
+                        seamless service.</p>
+                </div>
+                <!-- Chef de Partie -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-fire-burner"></i>
+                    <h3 class="serif">Chef de Partie</h3>
+                    <p>Station chefs responsible for managing specific kitchen sections and maintaining consistent
+                        quality.</p>
+                </div>
+                <!-- Kitchen Porter -->
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fa-solid fa-broom"></i>
+                    <h3 class="serif">Kitchen Porter</h3>
+                    <p>Reliable kitchen support staff assisting chefs with cleaning, organization, and smooth kitchen
+                        operations.</p>
+                </div>
+                <!-- Kitchen Cleaner -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-soap"></i>
+                    <h3 class="serif">Kitchen Cleaner</h3>
+                    <p>Dedicated professionals maintaining hygiene and sanitation standards across all kitchen areas.
+                    </p>
+                </div>
+                <!-- Night Kitchen Porter -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-moon"></i>
+                    <h3 class="serif">Night Kitchen Porter</h3>
+                    <p>Overnight kitchen support staff ensuring kitchens are cleaned, reset, and ready for the next
+                        day’s service.</p>
+                </div>
+            </div>
+
+            <!-- Polishing & Cleaning Staff -->
+            <h3 class="serif service-category-title" data-aos="fade-right" style="margin-top: 80px;">Polishing &
+                Cleaning Staff</h3>
+            <div class="services-grid">
+                <!-- Glass Polisher -->
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fa-solid fa-wine-glass"></i>
+                    <h3 class="serif">Glass Polisher</h3>
+                    <p>Specialist staff ensuring spotless presentation of glassware for premium dining experiences.</p>
+                </div>
+                <!-- Cutlery Polisher -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-spoon"></i>
+                    <h3 class="serif">Cutlery Polisher</h3>
+                    <p>Detail-focused professionals polishing and preparing cutlery to impeccable hospitality standards.
+                    </p>
+                </div>
+                <!-- Plate Polisher -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-plate-wheat"></i>
+                    <h3 class="serif">Plate Polisher</h3>
+                    <p>Experts responsible for preparing and polishing plates to ensure flawless table presentation.</p>
+                </div>
+                <!-- Front of House Cleaner -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-spray-can"></i>
+                    <h3 class="serif">Front of House Cleaner</h3>
+                    <p>Professional cleaning staff maintaining spotless dining areas, entrances, and customer spaces.
+                    </p>
+                </div>
+                <!-- Night Cleaner -->
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3 class="serif">Night Cleaner</h3>
+                    <p>Overnight cleaning specialists ensuring restaurants are perfectly prepared for the next business
+                        day.</p>
+                </div>
+            </div>
+
+            <!-- Front & Support Professionals -->
+            <h3 class="serif service-category-title" data-aos="fade-right" style="margin-top: 80px;">Front & Support
+                Professionals</h3>
+            <div class="services-grid">
+                <!-- Waitress -->
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fa-solid fa-person-dress"></i>
+                    <h3 class="serif">Waitress</h3>
+                    <p>Professional female service staff delivering attentive and elegant table service to guests.</p>
+                </div>
+                <!-- Waiter -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h3 class="serif">Waiter</h3>
+                    <p>Experienced front-of-house staff providing efficient and professional guest service.</p>
+                </div>
+                <!-- Barista -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3 class="serif">Barista</h3>
+                    <p>Skilled coffee specialists trained in preparing premium espresso-based beverages and café
+                        service.</p>
+                </div>
+                <!-- Receptionist -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-user-check"></i>
+                    <h3 class="serif">Receptionist</h3>
+                    <p>Polished front-desk professionals handling guest arrivals, reservations, and customer assistance.
+                    </p>
+                </div>
+                <!-- Other Hospitality Roles -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <h3 class="serif">Other Hospitality Roles</h3>
+                    <p>Versatile professionals for specialized hospitality needs including events, support, and niche
+                        service roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Portal Section -->
+    <section id="portal" class="section-padding">
+        <div class="portal-bg-zoom"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Portal & Connections</h2>
+                <p>Join our elite workforce or request premium staffing for your establishment.</p>
+            </div>
+
+            <!-- Portal Interactive Cards -->
+            <div class="portal-toggle-group" data-aos="fade-up">
+                <!-- Candidate Card -->
+                <div class="portal-card" onclick="togglePortal('candidate')">
+                    <div class="portal-icon-circle">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="serif">Apply for Opportunities</h3>
+                    <p class="card-desc">Join our professional hospitality workforce and grow your career.</p>
+                    <button class="btn-gold">Apply Now</button>
+                </div>
+
+                <!-- Restaurant Card -->
+                <div class="portal-card" onclick="togglePortal('restaurant')">
+                    <div class="portal-icon-circle">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h3 class="serif">Hire Exceptional Staff</h3>
+                    <p class="card-desc">Request skilled hospitality professionals for your restaurant or hotel.</p>
+                    <button class="btn-gold">Request Staff</button>
+                </div>
+            </div>
+
+            <div class="contact-container">
+                <!-- A) Apply for Opportunities -->
+                <div id="candidate-portal" class="portal-form-content" data-aos="fade-up">
+                    <div class="contact-form">
+                        <h3 class="serif form-section-title">Apply for Opportunities</h3>
+                        <p style="margin-bottom: 30px; color: #555;">Join London's most prestigious hospitality staffing
+                            network.</p>
+
+                        <form id="candidateForm">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" class="form-control" required placeholder="John Doe">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Native Place *</label>
+                                    <input type="text" class="form-control" required placeholder="Country/City">
+                                </div>
+                                <div class="form-group">
+                                    <label>Current UK Location *</label>
+                                    <input type="text" class="form-control" required placeholder="London Borough">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Visa Status *</label>
+                                    <select class="form-control" required>
+                                        <option value="">Select Status</option>
+                                        <option value="Student">Student</option>
+                                        <option value="PSW">PSW</option>
+                                        <option value="No Visa">No Visa</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Post Code *</label>
+                                    <input type="text" class="form-control" required placeholder="SW1A 1AA">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Working Experience (Hospitality) *</label>
+                                <textarea class="form-control" style="height: 100px;"
+                                    placeholder="Describe your relevant roles..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Upload CV (PDF/DOC) *</label>
+                                <input type="file" class="form-control" accept=".pdf,.doc,.docx" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" class="form-control" required placeholder="+44 7359 941485">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" class="form-control" required placeholder="email@address.com">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit
+                                Application</button>
+                        </form>
+                        <div id="candidateSuccess" class="success-message">
+                            <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h4>Application Submitted!</h4>
+                            <p>Thank you for choosing UDHAYAM JOB SERVICES LTD. Our recruitment team will review your
+                                application soon.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B) Hire Exceptional Staff -->
+                <div id="restaurant-portal" class="portal-form-content" data-aos="fade-up">
+                    <div class="contact-form">
+                        <h3 class="serif form-section-title">Hire Exceptional Staff</h3>
+                        <p style="margin-bottom: 30px; color: #555;">Secure elite workforce solutions for your
+                            hospitality establishment.</p>
+
+                        <form id="restaurantForm">
+                            <div class="form-group">
+                                <label>Restaurant Name *</label>
+                                <input type="text" class="form-control" required placeholder="Name of establishment">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Person *</label>
+                                <input type="text" class="form-control" required placeholder="Name">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Phone *</label>
+                                    <input type="tel" class="form-control" required placeholder="+44 7359 941485">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" class="form-control" required
+                                        placeholder="restaurant-email@address.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Job Roles Required (Multi-select) *</label>
+                                <div
+                                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; background: #fff; padding: 15px; border: 1px solid #ddd;">
+                                    <label style="font-weight: normal;"><input type="checkbox"> Chef</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> CDP</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Wait Staff</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Kitchen Porter</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Barista</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Cleaner</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Additional Requirements</label>
+                                <textarea class="form-control" style="height: 100px;"
+                                    placeholder="Specify any requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; background: #002366;">Request
+                                Staff</button>
+                        </form>
+                        <div id="restaurantSuccess" class="success-message">
+                            <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h4>Request Received!</h4>
+                            <p>Our staffing specialists will be in touch shortly to finalize the deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="section-padding" style="background: #fdfdfd;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for staffing solutions or any inquiries.</p>
+            </div>
+
+            <div class="contact-page-container">
+                <!-- Contact Form -->
+                <div class="contact-form" data-aos="fade-right">
+                    <form id="contactUsForm">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" class="form-control" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" class="form-control" required placeholder="email@address.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" class="form-control" placeholder="+44 7359 941485">
+                        </div>
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea class="form-control" style="height: 150px;" placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; height: 55px; background: #D4AF37; color: #fff;">Send
+                            Message</button>
+                    </form>
+                    <div id="contactSuccess" class="success-message">
+                        <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. A member of our team will get back to you shortly.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div class="contact-info-column" data-aos="fade-left">
+                    <div class="contact-info-box">
+                        <h3 class="serif" style="margin-bottom: 30px; font-size: 1.8rem; color: #0A2E5C;">Our
+                            Information</h3>
+
+                        <div class="info-item">
+                            <a href="tel:+447359941485"><i class="fa-solid fa-phone"></i></a>
+                            <div>
+                                <h4 style="color: #0A2E5C;">Phone</h4>
+                                <p><a href="tel:+447359941485">+44 7359 941485</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <a href="mailto:udhayamjobserviceshr@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                            <div>
+                                <h4 style="color: #0A2E5C;">Email</h4>
+                                <p><a href="mailto:udhayamjobserviceshr@gmail.com">udhayamjobserviceshr@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4 style="color: #0A2E5C;">Office Location</h4>
+                                <p>London, United Kingdom</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-connect">
+                            <h4 style="margin-bottom: 20px; color: #0A2E5C;">Connect With Us</h4>
+                            <a href="https://www.instagram.com/udhayamjobservices?igsh=MWR6b2V1N2szbWtobw=="
+                                target="_blank" class="instagram-btn">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Follow us on Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid #eee;">
+        <p>&copy; 2026 PRUTHVI RKR. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Sticky Navbar logic
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+
+        // Staged Animation for Vision & Mission using Intersection Observer
+        const observerOptions = {
+            threshold: 0.2,
+            once: true
+        };
+
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Trigger only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            animationObserver.observe(el);
+        });
+
+        // Portal Toggle Logic
+        function togglePortal(type) {
+            const candidatePortal = document.getElementById('candidate-portal');
+            const restaurantPortal = document.getElementById('restaurant-portal');
+            const btns = document.querySelectorAll('.portal-card');
+
+            // Reset active states
+            btns.forEach(btn => btn.classList.remove('active'));
+            candidatePortal.classList.remove('active');
+            restaurantPortal.classList.remove('active');
+
+            // Show selected portal
+            if (type === 'candidate') {
+                candidatePortal.classList.add('active');
+                btns[0].classList.add('active');
+            } else if (type === 'restaurant') {
+                restaurantPortal.classList.add('active');
+                btns[1].classList.add('active');
+            }
+
+            // Smooth scroll to form
+            setTimeout(() => {
+                const targetId = type === 'candidate' ? 'candidate-portal' : 'restaurant-portal';
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        // Form submission simulation
+        document.getElementById('candidateForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('candidateSuccess').style.display = 'block';
+        });
+
+        document.getElementById('restaurantForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('restaurantSuccess').style.display = 'block';
+        });
+
+        document.getElementById('contactUsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('contactSuccess').style.display = 'block';
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CV | UDHAYAM JOB SERVICES LTD</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .form-section-title {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .success-message {
+            display: none;
+            padding: 30px;
+            background: #e6f4ea;
+            color: #1e4620;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #c3e6cb;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky">
+        <div class="nav-container">
+            <div class="logo-group">
+                <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
+                <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="upload-cv.html">Upload CV</a></li>
+                <li><a href="index.html#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Header Section -->
+    <section id="portal" class="section-padding" style="padding-top: 150px;">
+        <div class="portal-bg-zoom"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Upload CV & Job Portal</h2>
+                <p>Submit your credentials to join our elite workforce or request staffing solutions.</p>
+            </div>
+
+            <!-- Portal Interactive Cards -->
+            <div class="portal-toggle-group" data-aos="fade-up">
+                <!-- Candidate Card -->
+                <div class="portal-card" onclick="togglePortal('candidate')">
+                    <div class="portal-icon-circle">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="serif">Apply for Opportunities</h3>
+                    <p class="card-desc">Join our professional hospitality workforce and grow your career.</p>
+                    <button class="btn-gold">Apply Now</button>
+                </div>
+
+                <!-- Restaurant Card -->
+                <div class="portal-card" onclick="togglePortal('restaurant')">
+                    <div class="portal-icon-circle">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h3 class="serif">Hire Exceptional Staff</h3>
+                    <p class="card-desc">Request skilled hospitality professionals for your restaurant or hotel.</p>
+                    <button class="btn-gold">Request Staff</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual Form Section -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-container">
+
+                <!-- A) Professional Application Portal -->
+                <div id="candidate-portal" class="portal-form-content">
+                    <div class="contact-form" data-aos="fade-up">
+                        <h3 class="serif form-section-title">Apply for Opportunities</h3>
+                        <p style="margin-bottom: 30px; color: #555;">Join London's most prestigious hospitality staffing
+                            network.</p>
+
+                        <form id="candidateForm">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" class="form-control" required placeholder="John Doe">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Native Place *</label>
+                                    <input type="text" class="form-control" required placeholder="Country/City">
+                                </div>
+                                <div class="form-group">
+                                    <label>Current UK Location *</label>
+                                    <input type="text" class="form-control" required placeholder="London Borough">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Visa Status *</label>
+                                    <select class="form-control" required>
+                                        <option value="">Select Status</option>
+                                        <option value="Student">Student</option>
+                                        <option value="PSW">PSW</option>
+                                        <option value="No Visa">No Visa</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Post Code *</label>
+                                    <input type="text" class="form-control" required placeholder="SW1A 1AA">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Door Number *</label>
+                                <input type="text" class="form-control" required placeholder="House/Flat number">
+                            </div>
+                            <div class="form-group">
+                                <label>Working Experience (Hospitality) *</label>
+                                <textarea class="form-control" style="height: 100px;"
+                                    placeholder="Describe your relevant roles..." required></textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Duration of Stay in UK *</label>
+                                    <input type="text" class="form-control" required placeholder="e.g. 2 years">
+                                </div>
+                                <div class="form-group">
+                                    <label>Languages Known *</label>
+                                    <input type="text" class="form-control" required placeholder="English, etc.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Upload CV (PDF/DOC) *</label>
+                                <input type="file" class="form-control" accept=".pdf,.doc,.docx" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" class="form-control" required placeholder="+44 7359 941485">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" class="form-control" required placeholder="email@address.com">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit
+                                Application</button>
+                        </form>
+                        <div id="candidateSuccess" class="success-message">
+                            <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h4>Application Submitted!</h4>
+                            <p>Thank you for choosing UDHAYAM JOB SERVICES LTD. Our recruitment team will review your
+                                application and contact
+                                you soon.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B) Restaurant Staffing Request Portal -->
+                <div id="restaurant-portal" class="portal-form-content">
+                    <div class="contact-form" data-aos="fade-up">
+                        <h3 class="serif form-section-title">Hire Exceptional Staff</h3>
+                        <p style="margin-bottom: 30px; color: #555;">Secure elite workforce solutions for your
+                            hospitality
+                            establishment.</p>
+
+                        <form id="restaurantForm">
+                            <div class="form-group">
+                                <label>Restaurant Name *</label>
+                                <input type="text" class="form-control" required placeholder="Name of establishment">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Person *</label>
+                                <input type="text" class="form-control" required placeholder="Name">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Phone *</label>
+                                    <input type="tel" class="form-control" required placeholder="+44 7359 941485">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" class="form-control" required
+                                        placeholder="restaurant-email@address.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Location *</label>
+                                <input type="text" class="form-control" required placeholder="Address/Borough">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Number of Staff Required *</label>
+                                    <input type="number" class="form-control" required min="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Duration *</label>
+                                    <select class="form-control" required>
+                                        <option value="Temporary">Temporary</option>
+                                        <option value="Permanent">Permanent</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Job Roles Required (Multi-select) *</label>
+                                <div
+                                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; background: #fff; padding: 15px; border: 1px solid #ddd;">
+                                    <label style="font-weight: normal;"><input type="checkbox"> Chef</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> CDP</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Wait Staff</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Kitchen Porter</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Barista</label>
+                                    <label style="font-weight: normal;"><input type="checkbox"> Cleaner</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Additional Requirements</label>
+                                <textarea class="form-control" style="height: 100px;"
+                                    placeholder="Specify any uniform requirements, special skills etc."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; height: 55px; background: #002366;">Request Staff</button>
+                        </form>
+                        <div id="restaurantSuccess" class="success-message">
+                            <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h4>Request Received!</h4>
+                            <p>Our staffing specialists are reviewing your requirements. We will be in touch shortly to
+                                finalize the deployment.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid #eee;">
+        <p>&copy; 2026 PRUTHVI RKR. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Portal Toggle Logic
+        function togglePortal(type) {
+            const candidatePortal = document.getElementById('candidate-portal');
+            const restaurantPortal = document.getElementById('restaurant-portal');
+            const btns = document.querySelectorAll('.portal-card');
+
+            // Reset active states
+            btns.forEach(btn => btn.classList.remove('active'));
+            candidatePortal.classList.remove('active');
+            restaurantPortal.classList.remove('active');
+
+            // Show selected portal
+            if (type === 'candidate') {
+                candidatePortal.classList.add('active');
+                btns[0].classList.add('active');
+            } else if (type === 'restaurant') {
+                restaurantPortal.classList.add('active');
+                btns[1].classList.add('active');
+            }
+
+            // Smooth scroll to form
+            setTimeout(() => {
+                const targetId = type === 'candidate' ? 'candidate-portal' : 'restaurant-portal';
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Simple form handling simulation
+        document.getElementById('candidateForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('candidateSuccess').style.display = 'block';
+            console.log('Candidate application submitted to mock Google Sheets integration.');
+        });
+
+        document.getElementById('restaurantForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('restaurantSuccess').style.display = 'block';
+            console.log('Restaurant request submitted to mock Google Sheets integration.');
+        });
+    </script>
+</body>
+
+</html>
