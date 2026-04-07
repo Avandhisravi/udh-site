@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | UDHAYAM JOB SERVICES LTD</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=2.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -16,8 +16,13 @@
     <nav id="navbar" class="sticky">
         <div class="nav-container">
             <div class="logo-group">
-                <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
-                <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+                <div class="logo-with-image">
+                    <img src="main.png" alt="Logo" class="main-logo-img">
+                    <div class="logo-text-stack">
+                        <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
+                        <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+                    </div>
+                </div>
             </div>
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
@@ -64,15 +69,14 @@
                             in every shift.</p>
                     </div>
                 </div>
-                <!-- Image side (using a colored placeholder for luxury feel) -->
-                <div data-aos="fade-left"
-                    style="background: var(--accent-gold); height: 450px; border-radius: 8px; position: relative;">
+                <!-- Image side with Cinematic Staggered Reveal -->
+                <div class="about-image-wrapper" data-aos="fade-left" style="height: 450px;">
                     <div
                         style="position: absolute; top: 20px; left: 20px; right: -20px; bottom: -20px; border: 2px solid #002366; z-index: -1;">
                     </div>
+                    <img src="main.png" alt="Logo" class="about-logo-overlay">
                     <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800"
-                        alt="Hospitality Professional"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        alt="Hospitality Professional" class="about-main-img">
                 </div>
             </div>
         </div>
@@ -132,8 +136,37 @@
     </section>
 
     <!-- Footer -->
-    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid #eee;">
-        <p>&copy; 2026 PRUTHVI RKR. All Rights Reserved.</p>
+    <footer class="footer-copyright">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="rectangle.png" class="footer-logo" loading="lazy">
+            </div>
+
+            <div class="footer-links">
+                <h2 class="serif">Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="upload-cv.html">Upload CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h2 class="serif">Connect With Us</h2>
+                <div class="social-icons">
+                    <a href="tel:+447359941485" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:udhayamjobserviceshr@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/udhayamjobservices?igsh=MWR6b2V1N2szbWtobw==" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-divider"></div>
+        <p class="copyright-text">&copy; 2026 UDHAYAM JOB SERVICES LTD. All Rights Reserved.</p>
+        <a href="https://www.instagram.com/intellex.web?igsh=MWlkODZuMmt0bjJleg==" class="meet-developers"
+            target="_blank" rel="noopener noreferrer">Meet the Developers</a>
     </footer>
 
 

@@ -7,7 +7,7 @@
     <title>UDHAYAM JOB SERVICES LTD | Elite Hospitality Staffing Solutions London</title>
     <meta name="description"
         content="UDHAYAM JOB SERVICES LTD is London's premier hospitality staffing agency, providing luxury restaurants with exceptional chefs, front-of-house staff, and verified professionals.">
-    <link rel="stylesheet" href="index.css?v=1.2">
+    <link rel="stylesheet" href="index.css?v=2.1">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
@@ -59,8 +59,13 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo-group">
-                <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
-                <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+                <div class="logo-with-image">
+                    <img src="square.png" alt="Logo" class="main-logo-img">
+                    <div class="logo-text-stack">
+                        <span class="logo-text">UDHAYAM JOB SERVICES LTD</span>
+                        <span class="tagline">Elevating Hospitality Workforce Excellence</span>
+                    </div>
+                </div>
             </div>
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
@@ -168,11 +173,10 @@
                             in every shift.</p>
                     </div>
                 </div>
-                <div data-aos="fade-left"
-                    style="background: var(--accent-gold); height: 450px; border-radius: 8px; position: relative;">
+                <div class="about-image-wrapper" data-aos="fade-left">
+                    <img src="main.png" alt="Udhayam Logo" class="about-logo-overlay">
                     <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800"
-                        alt="Hospitality Professional"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        alt="Hospitality Professional" class="about-main-img">
                 </div>
             </div>
         </div>
@@ -480,94 +484,93 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact-us" class="section-padding" style="background: #fdfdfd;">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our team for staffing solutions or any inquiries.</p>
-            </div>
+    <section id="contact-us" class="section-padding contact-bg"></section>
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team for staffing solutions or any inquiries.</p>
+        </div>
 
-            <div class="contact-page-container">
-                <!-- Contact Form -->
-                <div class="contact-form" data-aos="fade-right">
-                    <form id="contactUsForm">
-                        <div class="form-group">
-                            <label>Full Name *</label>
-                            <input type="text" class="form-control" required placeholder="Your Name">
+        <div class="contact-page-container">
+            <!-- Contact Form -->
+
+            <!-- Contact Info Column -->
+            <div class="contact-info-column" data-aos="fade-left">
+                <div class="contact-info-box">
+                    <h3 class="serif contact-title">Our Information</h3>
+
+                    <div class="info-item">
+                        <a href="tel:+447359941485"><i class="fa-solid fa-phone"></i></a>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+447359941485">+44 7359 941485</a></p>
                         </div>
-                        <div class="form-group">
-                            <label>Email Address *</label>
-                            <input type="email" class="form-control" required placeholder="email@address.com">
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number *</label>
-                            <input type="tel" class="form-control" placeholder="+44 7359 941485">
-                        </div>
-                        <div class="form-group">
-                            <label>Message *</label>
-                            <textarea class="form-control" style="height: 150px;" placeholder="How can we help you?"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary"
-                            style="width: 100%; height: 55px; background: #D4AF37; color: #fff;">Send
-                            Message</button>
-                    </form>
-                    <div id="contactSuccess" class="success-message">
-                        <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                        <h4>Message Sent!</h4>
-                        <p>Thank you for reaching out. A member of our team will get back to you shortly.</p>
                     </div>
-                </div>
 
-                <!-- Contact Info Column -->
-                <div class="contact-info-column" data-aos="fade-left">
-                    <div class="contact-info-box">
-                        <h3 class="serif" style="margin-bottom: 30px; font-size: 1.8rem; color: #0A2E5C;">Our
-                            Information</h3>
-
-                        <div class="info-item">
-                            <a href="tel:+447359941485"><i class="fa-solid fa-phone"></i></a>
-                            <div>
-                                <h4 style="color: #0A2E5C;">Phone</h4>
-                                <p><a href="tel:+447359941485">+44 7359 941485</a></p>
-                            </div>
+                    <div class="info-item">
+                        <a href="mailto:udhayamjobserviceshr@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:udhayamjobserviceshr@gmail.com">udhayamjobserviceshr@gmail.com</a></p>
                         </div>
+                    </div>
 
-                        <div class="info-item">
-                            <a href="mailto:udhayamjobserviceshr@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                            <div>
-                                <h4 style="color: #0A2E5C;">Email</h4>
-                                <p><a href="mailto:udhayamjobserviceshr@gmail.com">udhayamjobserviceshr@gmail.com</a>
-                                </p>
-                            </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Office Location</h4>
+                            <p>London, United Kingdom</p>
                         </div>
+                    </div>
 
-                        <div class="info-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <h4 style="color: #0A2E5C;">Office Location</h4>
-                                <p>London, United Kingdom</p>
-                            </div>
-                        </div>
-
-                        <!-- Social Media -->
-                        <div class="social-connect">
-                            <h4 style="margin-bottom: 20px; color: #0A2E5C;">Connect With Us</h4>
-                            <a href="https://www.instagram.com/udhayamjobservices?igsh=MWR6b2V1N2szbWtobw=="
-                                target="_blank" class="instagram-btn">
-                                <i class="fa-brands fa-instagram"></i>
-                                <span>Follow us on Instagram</span>
-                            </a>
-                        </div>
+                    <div class="social-connect">
+                        <h4 class="social-heading">Connect With Us</h4>
+                        <a href="https://www.instagram.com/udhayamjobservices?igsh=MWR6b2V1N2szbWtobw==" target="_blank"
+                            class="instagram-btn">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Follow us on Instagram</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- Footer -->
-    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid #eee;">
-        <p>&copy; 2026 PRUTHVI RKR. All Rights Reserved.</p>
+    <footer class="footer-copyright">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="rectangle.png" class="footer-logo" loading="lazy">
+            </div>
+
+            <div class="footer-links">
+                <h2 class="serif">Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="upload-cv.html">Upload CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h2 class="serif">Connect With Us</h2>
+                <div class="social-icons">
+                    <a href="tel:+447359941485" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:udhayamjobserviceshr@gmail.com" title="Email Us"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/udhayamjobservices?igsh=MWR6b2V1N2szbWtobw==" target="_blank"
+                        title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-divider"></div>
+        <p class="copyright-text">&copy; 2026 UDHAYAM JOB SERVICES LTD. All Rights Reserved.</p>
+        <a href="https://www.instagram.com/intellex.web?igsh=MWlkODZuMmt0bjJleg==" class="meet-developers"
+            target="_blank" rel="noopener noreferrer">Meet the Developers</a>
     </footer>
 
 
