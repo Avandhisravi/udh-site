@@ -7,7 +7,7 @@
     <title>UDHAYAM JOB SERVICES LTD | Elite Hospitality Staffing Solutions London</title>
     <meta name="description"
         content="UDHAYAM JOB SERVICES LTD is London's premier hospitality staffing agency, providing luxury restaurants with exceptional chefs, front-of-house staff, and verified professionals.">
-    <link rel="stylesheet" href="index.css?v=2.1">
+    <link rel="stylesheet" href="index.css?v=3.0">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
@@ -41,7 +41,7 @@
         #vision-mission .vm-card:hover,
         #vision-mission .vm-card:active {
             background-color: #0A2E5C !important;
-            color: #D4AF37 !important;
+            color: #C5863C !important;
             transform: translateY(-6px) !important;
         }
 
@@ -74,8 +74,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html#home">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="upload-cv.html">Upload CV</a></li>
                 <li><a href="index.html#contact-us">Contact Us</a></li>
             </ul>
@@ -91,7 +91,7 @@
             <p>Connecting Restaurants with Exceptional Talent.</p>
 
             <div class="btn-group">
-                <a href="index.html#contact-us" class="btn btn-primary">Hire Exceptional Staff</a>
+                <a href="upload-cv.html" class="btn btn-primary">Hire Exceptional Staff</a>
                 <a href="upload-cv.html" class="btn btn-secondary">Apply for Opportunities</a>
             </div>
 
@@ -167,8 +167,8 @@
                     <p style="font-size: 1.15rem; color: #555; margin-bottom: 30px;">UDHAYAM JOB SERVICES LTD is a
                         London-based luxury hospitality staffing agency. We specialize in identifying, screening, and
                         supplying the most talented professionals for the UK's most prestigious establishments.</p>
-                    <div style="padding-top: 20px; border-left: 3px solid #D4AF37; padding-left: 20px;">
-                        <h4 style="margin-bottom: 10px; color: #D4AF37;">Our Core Promise</h4>
+                    <div style="padding-top: 20px; border-left: 3px solid #C5863C; padding-left: 20px;">
+                        <h4 style="margin-bottom: 10px; color: #C5863C;">Our Core Promise</h4>
                         <p>To provide high-end recruitment that brands can trust, ensuring consistent, premium service
                             in every shift.</p>
                     </div>
@@ -389,7 +389,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Post Code *</label>
+                                    <label>Postcode *</label>
                                     <input type="text" class="form-control" required placeholder="SW1A 1AA">
                                 </div>
                             </div>
@@ -548,10 +548,10 @@
                 <h2 class="serif">Quick Links</h2>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
                     <li><a href="upload-cv.html">Upload CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html#contact-us">Contact</a></li>
                 </ul>
             </div>
 
@@ -669,11 +669,7 @@
             document.getElementById('restaurantSuccess').style.display = 'block';
         });
 
-        document.getElementById('contactUsForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            this.style.display = 'none';
-            document.getElementById('contactSuccess').style.display = 'block';
-        });
+
     </script>
 
 </body>
