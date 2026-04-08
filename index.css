@@ -817,7 +817,10 @@ input[type="file"]::file-selector-button:hover {
 /* --- Mobile & Responsive Design --- */
 @media (max-width: 1100px) {
   nav {
-    height: 90px;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(15, 10, 8, 0.95), rgba(15, 10, 8, 0.8));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 
   .nav-container {
@@ -843,20 +846,20 @@ input[type="file"]::file-selector-button:hover {
     right: -100%;
     width: 320px;
     height: 100vh;
-    background: rgba(15, 10, 8, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(15, 12, 10, 0.96);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
     transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
     z-index: 1000;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-    border-left: 2px solid var(--gold-static);
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.6);
+    border-left: 1px solid rgba(197, 134, 60, 0.2);
     opacity: 0;
     visibility: hidden;
-    padding: 2rem;
+    padding: 3rem;
   }
 
   .nav-links.active {
@@ -894,25 +897,24 @@ input[type="file"]::file-selector-button:hover {
 
   /* Section Spacing */
   .section-padding {
-    padding: 60px 0 80px;
+    padding: 80px 0 100px;
   }
 
   .nav-container {
     padding: 0 1.5rem;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     width: 100%;
   }
 
   .logo-group {
-    align-items: center;
-    text-align: center;
-    max-width: 70%;
-    /* Prevent logo from hitting hamburger */
+    align-items: flex-start;
+    text-align: left;
+    max-width: 80%;
   }
 
   .logo-text {
-    font-size: 1.15rem !important;
+    font-size: 1.1rem !important;
     letter-spacing: 1.5px;
     white-space: normal;
     line-height: 1.2;
@@ -920,90 +922,125 @@ input[type="file"]::file-selector-button:hover {
   }
 
   .tagline {
-    font-size: 0.55rem !important;
-    letter-spacing: 0.8px;
+    font-size: 0.5rem !important;
+    letter-spacing: 0.5px;
     margin: 4px 0 0 0 !important;
   }
 
-  /* Hamburger Menu Position Fix for centered mobile layout */
+  /* Hamburger Menu Position Fix */
   .menu-toggle {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    display: flex !important;
   }
 
   /* Hero Section Mobile Fixes */
   .hero {
     height: auto;
     min-height: 100vh;
-    padding: 130px 0 70px;
+    padding: 140px 20px 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: scroll;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(to bottom, 
+      rgba(0, 0, 0, 0.8) 0%, 
+      rgba(43, 31, 24, 0.85) 50%, 
+      rgba(10, 5, 0, 0.9) 100%
+    );
+    backdrop-filter: blur(2px);
   }
 
   .hero-content {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0;
     max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero h1 {
-    font-size: 2.1rem !important;
-    line-height: 1.25;
-    margin-bottom: 25px;
+    font-size: 2.3rem !important;
+    line-height: 1.2;
+    margin-bottom: 30px;
     width: 100%;
     font-weight: 800;
+    letter-spacing: -0.01em;
   }
 
   .hero p {
     font-size: 1.1rem !important;
-    margin-bottom: 45px;
+    line-height: 1.4;
+    margin-bottom: 50px;
     padding: 0 10px;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .btn-group {
     flex-direction: column;
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
+    padding: 0 10px;
     margin: 0 auto;
-    gap: 15px;
+    gap: 20px;
   }
 
   .btn {
-    width: 100% !important;
-    padding: 16px 20px !important;
-    border-radius: 50px !important;
-    font-size: 0.9rem;
+    width: 95% !important;
+    padding: 20px 25px !important;
+    border-radius: 999px !important;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn:hover, .btn:active {
+    transform: scale(1.02);
   }
 
   /* Stats Section 2x2 Grid */
   .stats {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important;
-    margin-top: 60px !important;
+    gap: 20px !important;
+    margin-top: 70px !important;
     width: 100% !important;
-    padding: 0 10px;
+    padding: 0;
   }
 
   .stat-item {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(197, 134, 60, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(197, 134, 60, 0.15);
     padding: 20px 10px;
     border-radius: 12px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .stat-item h3 {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
     color: #C5863C;
+    margin-bottom: 5px;
+    text-align: center;
   }
 
   .stat-item p {
     font-size: 0.65rem !important;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
   }
 
   /* Typography Refinement */
@@ -1137,14 +1174,21 @@ input[type="file"]::file-selector-button:hover {
     padding: 35px 25px !important;
     /* Premium card padding */
     border-radius: 15px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    background: #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: #0A2E5C !important;
     border-top: 5px solid #C5863C;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #C5863C !important;
+  }
+
+  .vm-card h3,
+  .vm-card p,
+  .vm-card .vm-icon {
+    color: #C5863C !important;
   }
 
   .vm-card h3 {
@@ -1186,7 +1230,10 @@ input[type="file"]::file-selector-button:hover {
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 1.8rem !important;
+    font-size: 2.1rem !important;
+  }
+  .section-padding {
+    padding: 80px 0;
   }
 }
 
@@ -1315,6 +1362,43 @@ input[type="file"]::file-selector-button:hover {
   .contact-page-container {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 0 0 60px; /* Removed side padding to avoid double-padding with .container */
+    width: 100%;
+  }
+
+  .contact-info-box {
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .info-item {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 20px 15px;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .info-item div {
+    text-align: right;
+    width: auto;
+    flex: 1;
+  }
+
+  .contact-title {
+    text-align: center;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+  }
+
+  .contact-title::after {
+    margin: 12px auto 0;
   }
 }
 
@@ -1335,7 +1419,7 @@ input[type="file"]::file-selector-button:hover {
 }
 
 .footer-logo {
-  max-width: 280px;
+  max-width: 320px;
   height: auto;
   opacity: 1;
 }
@@ -1463,12 +1547,7 @@ input[type="file"]::file-selector-button:hover {
   }
 
   .footer-social {
-    text-align: center;
-    min-width: auto;
-  }
-
-  .social-icons {
-    justify-content: center;
+    display: none !important;
   }
 }
 
@@ -1517,6 +1596,10 @@ input[type="file"]::file-selector-button:hover {
   color: #ffffff;
   font-size: 1.08rem;
   text-decoration: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .info-item div {
