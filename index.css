@@ -96,6 +96,10 @@ nav.sticky {
   padding: 0 4rem;
 }
 
+.logo-group {
+  text-decoration: none;
+}
+
 .logo-with-image {
   display: flex;
   align-items: center;
