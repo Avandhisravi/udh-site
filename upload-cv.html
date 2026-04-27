@@ -88,7 +88,7 @@
                     <div class="portal-icon-circle">
                         <i class="fa-solid fa-hotel"></i>
                     </div>
-                    <h3 class="serif">Staffing Solutions</h3>
+                    <h3 class="serif">Hire Staff</h3>
                     <p class="card-desc">Request skilled hospitality professionals for your restaurant or hotel.</p>
                     <button class="btn-gold">Request Staff</button>
                 </div>
@@ -98,7 +98,7 @@
                     <div class="portal-icon-circle">
                         <i class="fa-solid fa-user-graduate"></i>
                     </div>
-                    <h3 class="serif">Start your application</h3>
+                    <h3 class="serif">Apply for Jobs</h3>
                     <p class="card-desc">Join our professional hospitality workforce and grow your career.</p>
                     <button class="btn-gold">Apply Now</button>
                 </div>
@@ -114,7 +114,7 @@
                 <!-- A) Professional Application Portal -->
                 <div id="candidate-portal" class="portal-form-content">
                     <div class="contact-form" data-aos="fade-up">
-                        <h3 class="serif form-section-title">Start your application</h3>
+                        <h3 class="serif form-section-title">Apply for Jobs</h3>
                         <p style="margin-bottom: 30px; color: #555;">Join London's most prestigious hospitality staffing
                             network.</p>
 
@@ -136,13 +136,17 @@
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
                                     <label>Visa Status *</label>
-                                    <select name="Visa Status" class="form-control" required>
+                                    <select name="Visa Status" class="form-control" required id="visaStatusSelect">
                                         <option value="">Select Status</option>
                                         <option value="Student">Student</option>
                                         <option value="PSW">PSW</option>
                                         <option value="No Visa">No Visa</option>
                                         <option value="Other">Other</option>
                                     </select>
+                                </div>
+                                <div class="form-group" id="visaOtherGroup" style="display: none;">
+                                    <label>Please specify Visa *</label>
+                                    <input type="text" name="Visa Status Other" id="visaOtherInput" class="form-control" placeholder="Specify your visa status">
                                 </div>
                                 <div class="form-group">
                                     <label>Postcode *</label>
@@ -167,6 +171,10 @@
                                     <label>Languages Known *</label>
                                     <input type="text" name="Languages" class="form-control" required placeholder="English, etc.">
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Reference / In care of</label>
+                                <input type="text" name="Reference" class="form-control" placeholder="Name of reference or person in care of">
                             </div>
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -195,7 +203,7 @@
                 <!-- B) Restaurant Staffing Request Portal -->
                 <div id="restaurant-portal" class="portal-form-content">
                     <div class="contact-form" data-aos="fade-up">
-                        <h3 class="serif form-section-title">Staffing Solutions</h3>
+                        <h3 class="serif form-section-title">Hire Staff</h3>
                         <p style="margin-bottom: 30px; color: #555;">Secure elite workforce solutions for your
                             hospitality
                             establishment.</p>
@@ -307,6 +315,23 @@
                 const targetId = type === 'candidate' ? 'candidate-portal' : 'restaurant-portal';
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
+        }
+        
+        // Visa Status "Other" Logic
+        const visaStatusSelect = document.getElementById('visaStatusSelect');
+        const visaOtherGroup = document.getElementById('visaOtherGroup');
+        const visaOtherInput = document.getElementById('visaOtherInput');
+
+        if (visaStatusSelect) {
+            visaStatusSelect.addEventListener('change', function() {
+                if (this.value === 'Other') {
+                    visaOtherGroup.style.display = 'block';
+                    visaOtherInput.setAttribute('required', 'true');
+                } else {
+                    visaOtherGroup.style.display = 'none';
+                    visaOtherInput.removeAttribute('required');
+                }
+            });
         }
 
         // Mobile Menu Toggle

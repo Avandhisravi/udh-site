@@ -371,6 +371,32 @@ nav.sticky {
   opacity: 0.8;
 }
 
+.whatsapp-hero-stat {
+  text-decoration: none;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-pop {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  font-size: 2.5rem;
+  color: #25D366;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.4));
+}
+
+.whatsapp-hero-stat:hover .whatsapp-pop {
+  transform: translateX(-50%) scale(1);
+}
+
+.whatsapp-hero-stat:hover h3 {
+  color: #25D366;
+}
+
 /* --- Services Grid --- */
 .services-grid {
   display: grid;
