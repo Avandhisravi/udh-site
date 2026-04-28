@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload CV | UDHAYAM JOB SERVICES LTD</title>
+    <title>Hire and Job Portal | UDHAYAM JOB SERVICES LTD</title>
     <link rel="stylesheet" href="index.css?v=3.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -65,7 +65,7 @@
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="upload-cv.html">Upload CV</a></li>
+                <li><a href="upload-cv.html">Hire and Job Portal</a></li>
                 <li><a href="index.html#contact-us">Contact Us</a></li>
             </ul>
         </div>
@@ -77,7 +77,7 @@
         <div class="portal-bg-zoom"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <div class="section-header" data-aos="fade-up">
-                <h2>Upload CV & Job Portal</h2>
+                <h2>Hire and Job Portal</h2>
                 <p>Submit your credentials to join our elite workforce or request staffing solutions.</p>
             </div>
 
@@ -119,18 +119,40 @@
                             network.</p>
 
                         <form id="candidateForm">
-                            <div class="form-group">
-                                <label>Full Name *</label>
-                                <input type="text" name="Full Name" class="form-control" required placeholder="John Doe">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" name="Full Name" class="form-control" required
+                                        placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label>Age *</label>
+                                    <input type="number" name="Age" class="form-control" required placeholder="e.g. 25"
+                                        min="16" max="100">
+                                </div>
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
-                                    <label>Native Place *</label>
-                                    <input type="text" name="Native Place" class="form-control" required placeholder="Country/City">
+                                    <label>UK Address</label>
+                                    <textarea name="UK Address" class="form-control" style="height: 80px;"
+                                        placeholder="Full UK Address"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Current UK Location *</label>
-                                    <input type="text" name="UK Location" class="form-control" required placeholder="London Borough">
+                                    <label>Indian Address</label>
+                                    <textarea name="Indian Address" class="form-control" style="height: 80px;"
+                                        placeholder="Full Indian Address"></textarea>
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Native Place</label>
+                                    <input type="text" name="Native Place" class="form-control"
+                                        placeholder="Country/City">
+                                </div>
+                                <div class="form-group">
+                                    <label>Current UK Location</label>
+                                    <input type="text" name="UK Location" class="form-control"
+                                        placeholder="London Borough">
                                 </div>
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -146,48 +168,74 @@
                                 </div>
                                 <div class="form-group" id="visaOtherGroup" style="display: none;">
                                     <label>Please specify Visa *</label>
-                                    <input type="text" name="Visa Status Other" id="visaOtherInput" class="form-control" placeholder="Specify your visa status">
+                                    <input type="text" name="Visa Status Other" id="visaOtherInput" class="form-control"
+                                        placeholder="Specify your visa status">
                                 </div>
-                                <div class="form-group">
-                                    <label>Postcode *</label>
-                                    <input type="text" name="Postcode" class="form-control" required placeholder="SW1A 1AA">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Door Number *</label>
-                                <input type="text" name="Door Number" class="form-control" required placeholder="House/Flat number">
-                            </div>
-                            <div class="form-group">
-                                <label>Working Experience (Hospitality) *</label>
-                                <textarea name="Experience" class="form-control" style="height: 100px;"
-                                    placeholder="Describe your relevant roles..." required></textarea>
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
-                                    <label>Duration of Stay in UK *</label>
-                                    <input type="text" name="Stay Duration" class="form-control" required placeholder="e.g. 2 years">
+                                    <label>Postcode</label>
+                                    <input type="text" name="Postcode" class="form-control" placeholder="SW1A 1AA">
                                 </div>
                                 <div class="form-group">
-                                    <label>Languages Known *</label>
-                                    <input type="text" name="Languages" class="form-control" required placeholder="English, etc.">
+                                    <label>Door Number</label>
+                                    <input type="text" name="Door Number" class="form-control"
+                                        placeholder="House/Flat number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Working Experience (Hospitality)</label>
+                                <textarea name="Experience" class="form-control" style="height: 100px;"
+                                    placeholder="Describe your relevant roles..."></textarea>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Duration of Stay in UK</label>
+                                    <input type="text" name="Stay Duration" class="form-control"
+                                        placeholder="e.g. 2 years">
+                                </div>
+                                <div class="form-group">
+                                    <label>Languages Known</label>
+                                    <input type="text" name="Languages" class="form-control"
+                                        placeholder="English, etc.">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Reference / In care of</label>
-                                <input type="text" name="Reference" class="form-control" placeholder="Name of reference or person in care of">
+                                <input type="text" name="Reference" class="form-control"
+                                    placeholder="Name of reference or person in care of">
                             </div>
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
-                                    <label>Phone Number *</label>
-                                    <input type="tel" name="Phone" class="form-control" required placeholder="+44 7359 941485">
+                                    <label>UK Phone Number *</label>
+                                    <input type="tel" name="Phone" class="form-control" required
+                                        placeholder="+44 7359 941485">
                                 </div>
                                 <div class="form-group">
-                                    <label>Email Address *</label>
-                                    <input type="email" name="Email" class="form-control" required placeholder="email@address.com">
+                                    <label>UK WhatsApp Number</label>
+                                    <input type="tel" name="UK WhatsApp" class="form-control"
+                                        placeholder="+44 WhatsApp Number">
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary" id="candidateSubmitBtn" style="width: 100%;">Submit
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Indian Calling Number</label>
+                                    <input type="tel" name="Indian Phone" class="form-control"
+                                        placeholder="+91 Calling Number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Indian WhatsApp Number</label>
+                                    <input type="tel" name="Indian WhatsApp" class="form-control"
+                                        placeholder="+91 WhatsApp Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="Email" class="form-control" placeholder="email@address.com">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="candidateSubmitBtn"
+                                style="width: 100%;">Submit
                                 Application</button>
                         </form>
                         <div id="candidateSuccess" class="success-message">
@@ -210,18 +258,24 @@
 
                         <form id="restaurantForm">
                             <input type="hidden" name="Form Type" value="Restaurant Staffing Request">
+
                             <div class="form-group">
                                 <label>Restaurant Name *</label>
-                                <input type="text" name="Restaurant Name" class="form-control" required placeholder="Name of establishment">
+                                <input type="text" name="Restaurant Name" class="form-control" required
+                                    placeholder="Name of establishment">
                             </div>
+
                             <div class="form-group">
                                 <label>Contact Person *</label>
-                                <input type="text" name="Contact Person" class="form-control" required placeholder="Name">
+                                <input type="text" name="Contact Person" class="form-control" required
+                                    placeholder="Name">
                             </div>
+
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
                                     <label>Phone *</label>
-                                    <input type="tel" name="Phone" class="form-control" required placeholder="+44 7359 941485">
+                                    <input type="tel" name="Phone" class="form-control" required
+                                        placeholder="+44 7359 941485">
                                 </div>
                                 <div class="form-group">
                                     <label>Email *</label>
@@ -229,14 +283,18 @@
                                         placeholder="restaurant-email@address.com">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label>Location *</label>
-                                <input type="text" name="Location" class="form-control" required placeholder="Address/Borough">
+                                <input type="text" name="Location" class="form-control" required
+                                    placeholder="Address/Borough">
                             </div>
+
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
                                     <label>Number of Staff Required *</label>
-                                    <input type="number" name="Staff Count" class="form-control" required min="1">
+                                    <input type="number" name="Number of Staff Required" class="form-control" required
+                                        min="1">
                                 </div>
                                 <div class="form-group">
                                     <label>Duration *</label>
@@ -246,26 +304,25 @@
                                     </select>
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label>Job Roles Required (Multi-select) *</label>
-                                <div
-                                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; background: #fff; padding: 15px; border: 1px solid #ddd;">
-                                    <label style="font-weight: normal;"><input type="checkbox" name="Role_Chef"> Chef</label>
-                                    <label style="font-weight: normal;"><input type="checkbox" name="Role_CDP"> CDP</label>
-                                    <label style="font-weight: normal;"><input type="checkbox" name="Role_WaitStaff"> Wait Staff</label>
-                                    <label style="font-weight: normal;"><input type="checkbox" name="Role_KP"> Kitchen Porter</label>
-                                    <label style="font-weight: normal;"><input type="checkbox" name="Role_Barista"> Barista</label>
-                                    <label style="font-weight: normal;"><input type="checkbox" name="Role_Cleaner"> Cleaner</label>
-                                </div>
+                                <label>Job Roles Required *</label>
+                                <input type="text" name="Job Roles Required" class="form-control" required
+                                    placeholder="e.g. Chef, Wait Staff, Kitchen Porter">
                             </div>
+
                             <div class="form-group">
                                 <label>Additional Requirements</label>
-                                <textarea name="Additional Info" class="form-control" style="height: 100px;"
+                                <textarea name="Additional Requirements" class="form-control" style="height: 100px;"
                                     placeholder="Specify any uniform requirements, special skills etc."></textarea>
                             </div>
+
                             <button type="submit" class="btn btn-primary" id="restaurantSubmitBtn"
-                                style="width: 100%; height: 55px; background: #002366;">Request Staff</button>
+                                style="width: 100%; height: 55px; background: #002366;">
+                                Request Staff
+                            </button>
                         </form>
+
                         <div id="restaurantSuccess" class="success-message">
                             <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: 10px;"></i>
                             <h4>Request Received!</h4>
@@ -316,14 +373,14 @@
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
         }
-        
+
         // Visa Status "Other" Logic
         const visaStatusSelect = document.getElementById('visaStatusSelect');
         const visaOtherGroup = document.getElementById('visaOtherGroup');
         const visaOtherInput = document.getElementById('visaOtherInput');
 
         if (visaStatusSelect) {
-            visaStatusSelect.addEventListener('change', function() {
+            visaStatusSelect.addEventListener('change', function () {
                 if (this.value === 'Other') {
                     visaOtherGroup.style.display = 'block';
                     visaOtherInput.setAttribute('required', 'true');
@@ -353,34 +410,37 @@
 
         // GOOGLE SHEETS INTEGRATION CONFIG
         // PASTE YOUR URL BELOW BETWEEN THE QUOTES
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmwY25QJUCyWo5H1QrEfthYNyBkXDTdOHPUKvqc6dnrlGc_AGy00puPU8tvHeTrQ/exec';
-
+        const HIRE_URL = 'https://script.google.com/macros/s/AKfycbxsGxmEWy2ZEj73GoqPmupZ4LIemB-LZJTZaA7xDZ-zUCW20BfJPxw_DttzJ35TXuc/exec';
+        const JOB_URL = 'https://script.google.com/macros/s/AKfycbwmwY25QJUCyWo5H1QrEfthYNyBkXDTdOHPUKvqc6dnrlGc_AGy00puPU8tvHeTrQ/exec';
         // Candidate Form Submission
         document.getElementById('candidateForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const form = this;
             const submitBtn = document.getElementById('candidateSubmitBtn');
-            
+
             submitBtn.innerText = 'Submitting...';
             submitBtn.disabled = true;
 
-            const formData = new FormData(form);
+            const rawData = new FormData(form);
+            const params = new URLSearchParams();
+            params.append('Form Type', 'Job Application');
+            rawData.forEach((value, key) => params.append(key, value));
 
-            fetch(SCRIPT_URL, {
-                method: 'POST',
-                body: formData
+            const fullUrl = JOB_URL + '?' + params.toString();
+
+            fetch(fullUrl, {
+                method: 'GET',
+                mode: 'no-cors'
             })
-            .then(response => {
-                form.style.display = 'none';
-                document.getElementById('candidateSuccess').style.display = 'block';
-                console.log('Success!', response);
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('Success! Your application has been sent.');
-                form.style.display = 'none';
-                document.getElementById('candidateSuccess').style.display = 'block';
-            });
+                .then(() => {
+                    form.style.display = 'none';
+                    document.getElementById('candidateSuccess').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    form.style.display = 'none';
+                    document.getElementById('candidateSuccess').style.display = 'block';
+                });
         });
 
         // Restaurant Form Submission
@@ -392,23 +452,26 @@
             submitBtn.innerText = 'Requesting...';
             submitBtn.disabled = true;
 
-            const formData = new FormData(form);
+            const rawData = new FormData(form);
+            const params = new URLSearchParams();
+            params.append('Form Type', 'Restaurant Staffing Request');
+            rawData.forEach((value, key) => params.append(key, value));
 
-            fetch(SCRIPT_URL, {
-                method: 'POST',
-                body: formData
+            const fullUrl = HIRE_URL + '?' + params.toString();
+
+            fetch(fullUrl, {
+                method: 'GET',
+                mode: 'no-cors'
             })
-            .then(response => {
-                form.style.display = 'none';
-                document.getElementById('restaurantSuccess').style.display = 'block';
-                console.log('Success!', response);
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('Success! Your request has been sent.');
-                form.style.display = 'none';
-                document.getElementById('restaurantSuccess').style.display = 'block';
-            });
+                .then(() => {
+                    form.style.display = 'none';
+                    document.getElementById('restaurantSuccess').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    form.style.display = 'none';
+                    document.getElementById('restaurantSuccess').style.display = 'block';
+                });
         });
         // Handle URL parameters for direct portal access
         window.addEventListener('load', () => {
@@ -419,17 +482,17 @@
                 const portalSection = document.getElementById('portal');
                 if (portalSection) {
                     portalSection.style.display = 'none';
-                    
+
                     // Adjust padding for the next section (the form section)
                     const formSection = portalSection.nextElementSibling;
                     if (formSection && formSection.tagName === 'SECTION') {
                         formSection.style.paddingTop = '160px'; // Space for fixed navbar
                     }
                 }
-                
+
                 // Show the specific portal
                 togglePortal(type);
-                
+
                 // Ensure we start at the top of the page
                 window.scrollTo(0, 0);
             }
