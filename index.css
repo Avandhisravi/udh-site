@@ -11,6 +11,7 @@ html {
   --accent-gold: linear-gradient(135deg, #C5863C 0%, #C5863C 100%);
   --gold-static: #C5863C;
   --white: #FFFFFF;
+  --buttermilk: #dbd1b6;
   --text-dark: #1A1A1A;
   --text-light: #555555;
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -28,7 +29,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--white);
+  background-color: var(--buttermilk);
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
@@ -53,6 +54,49 @@ h4,
 
 .section-padding {
   padding: 100px 0;
+}
+
+/* --- Section Divider --- */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  height: 32px;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  max-width: 500px;
+  background: linear-gradient(90deg, transparent, #C5863C 60%, transparent);
+}
+
+.section-divider::after {
+  background: linear-gradient(90deg, transparent, #C5863C 60%, transparent);
+  transform: scaleX(-1);
+}
+
+.section-divider span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: #C5863C;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  border: 1px solid rgba(197, 134, 60, 0.5);
+  background: #dbd1b6;
 }
 
 #contact-us {
@@ -546,8 +590,8 @@ nav.sticky {
 #portal {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
-  /* Base color */
+  background: var(--buttermilk);
+  /* Buttermilk base */
 }
 
 .portal-bg-zoom {
@@ -558,7 +602,7 @@ nav.sticky {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(circle at center, #ffffff 0%, #f7f9fc 100%);
+  background: #dbd1b6;
   animation: portalBgScale 12s ease-out forwards;
   transform-origin: center;
 }
@@ -1060,7 +1104,8 @@ input[type="file"]::file-selector-button:hover {
     padding: 20px 10px;
     border-radius: 12px;
     width: 100%;
-    min-height: 110px; /* Ensure uniform height for all boxes */
+    min-height: 110px;
+    /* Ensure uniform height for all boxes */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1620,7 +1665,7 @@ input[type="file"]::file-selector-button:hover {
 }
 
 .contact-bg {
-  background: radial-gradient(circle at top, #ffffff, #f4f6f9);
+  background: #dbd1b6;
 }
 
 .info-item h4 {
