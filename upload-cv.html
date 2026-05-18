@@ -188,26 +188,39 @@
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
-                                    <label>UK Address</label>
-                                    <textarea name="UK Address" class="form-control" style="height: 80px;"
-                                        placeholder="Full UK Address"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Indian Address</label>
-                                    <textarea name="Indian Address" class="form-control" style="height: 80px;"
-                                        placeholder="Full Indian Address"></textarea>
-                                </div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                <div class="form-group">
-                                    <label>Native Place</label>
-                                    <input type="text" name="Native Place" class="form-control"
-                                        placeholder="Country/City">
+                                    <label>Native Country *</label>
+                                    <select name="Native Place" id="nativeCountrySelect" class="form-control" required>
+                                        <option value="" disabled selected>Select Country</option>
+                                        <option value="India">India</option>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Sri Lanka">Sri Lanka</option>
+                                        <option value="Nepal">Nepal</option>
+                                        <option value="Nigeria">Nigeria</option>
+                                        <option value="Philippines">Philippines</option>
+                                        <option value="Other">Other</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Current UK Location</label>
                                     <input type="text" name="UK Location" class="form-control"
                                         placeholder="London Borough">
+                                </div>
+                            </div>
+                            <div class="form-group" id="otherCountryGroup" style="display: none; margin-bottom: 20px;">
+                                <label>Specify Native Country *</label>
+                                <input type="text" id="otherCountryInput" name="Other Native Place" class="form-control" placeholder="Enter your country">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>UK Address</label>
+                                    <textarea name="UK Address" class="form-control" style="height: 80px;"
+                                        placeholder="Full UK Address"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label id="nativeAddressLabel">Native Address</label>
+                                    <textarea name="Indian Address" id="nativeAddressInput" class="form-control" style="height: 80px;"
+                                        placeholder="Full Native Address"></textarea>
                                 </div>
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -273,16 +286,17 @@
                                         placeholder="+44 WhatsApp Number">
                                 </div>
                             </div>
+
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
-                                    <label>Indian Calling Number</label>
-                                    <input type="tel" name="Indian Phone" class="form-control"
-                                        placeholder="+91 Calling Number">
+                                    <label id="nativePhoneLabel">Native Calling Number</label>
+                                    <input type="tel" name="Indian Phone" id="nativePhoneInput" class="form-control"
+                                        placeholder="Calling Number">
                                 </div>
                                 <div class="form-group">
-                                    <label>Indian WhatsApp Number</label>
-                                    <input type="tel" name="Indian WhatsApp" class="form-control"
-                                        placeholder="+91 WhatsApp Number">
+                                    <label id="nativeWhatsappLabel">Native WhatsApp Number</label>
+                                    <input type="tel" name="Indian WhatsApp" id="nativeWhatsappInput" class="form-control"
+                                        placeholder="WhatsApp Number">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -427,6 +441,48 @@
                 const targetId = type === 'candidate' ? 'candidate-portal' : 'restaurant-portal';
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
+        }
+
+        // Native Country Logic
+        const nativeCountrySelect = document.getElementById('nativeCountrySelect');
+        const otherCountryGroup = document.getElementById('otherCountryGroup');
+        const otherCountryInput = document.getElementById('otherCountryInput');
+
+        const nativeAddressLabel = document.getElementById('nativeAddressLabel');
+        const nativeAddressInput = document.getElementById('nativeAddressInput');
+        const nativePhoneLabel = document.getElementById('nativePhoneLabel');
+        const nativePhoneInput = document.getElementById('nativePhoneInput');
+        const nativeWhatsappLabel = document.getElementById('nativeWhatsappLabel');
+        const nativeWhatsappInput = document.getElementById('nativeWhatsappInput');
+
+        function updateNativeLabels(country) {
+            const c = (country && country.trim() !== '') ? country : 'Native';
+            if (nativeAddressLabel) nativeAddressLabel.innerText = `${c} Address`;
+            if (nativeAddressInput) nativeAddressInput.placeholder = `Full ${c} Address`;
+            if (nativePhoneLabel) nativePhoneLabel.innerText = `${c} Calling Number`;
+            if (nativePhoneInput) nativePhoneInput.placeholder = `Calling Number in ${c}`;
+            if (nativeWhatsappLabel) nativeWhatsappLabel.innerText = `${c} WhatsApp Number`;
+            if (nativeWhatsappInput) nativeWhatsappInput.placeholder = `WhatsApp Number in ${c}`;
+        }
+
+        if (nativeCountrySelect) {
+            nativeCountrySelect.addEventListener('change', function () {
+                if (this.value === 'Other') {
+                    otherCountryGroup.style.display = 'block';
+                    otherCountryInput.setAttribute('required', 'true');
+                    updateNativeLabels(otherCountryInput.value);
+                } else {
+                    otherCountryGroup.style.display = 'none';
+                    otherCountryInput.removeAttribute('required');
+                    updateNativeLabels(this.value);
+                }
+            });
+        }
+
+        if (otherCountryInput) {
+            otherCountryInput.addEventListener('input', function () {
+                updateNativeLabels(this.value);
+            });
         }
 
         // Visa Status "Other" Logic
