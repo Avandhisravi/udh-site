@@ -79,6 +79,43 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* Instagram Hero Button */
+        #hero-insta-btn {
+            position: absolute;
+            bottom: 36px;
+            left: 36px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            box-shadow: 0 4px 20px rgba(188, 24, 136, 0.45);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            z-index: 10;
+        }
+        #hero-insta-btn i {
+            font-size: 1.3rem;
+        }
+        #hero-insta-btn:hover {
+            transform: scale(1.07) translateY(-2px);
+            box-shadow: 0 8px 28px rgba(188, 24, 136, 0.65);
+        }
+        @media (max-width: 480px) {
+            #hero-insta-btn {
+                bottom: 20px;
+                left: 16px;
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+            #hero-insta-btn span { display: none; }
+        }
+
         /* Vision & Mission Scroll Animation - Kept here for ease of entry tracking */
         #vision-mission .vm-card {
             opacity: 0;
@@ -181,6 +218,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- Instagram CTA – bottom-left of hero -->
+        <a href="https://www.instagram.com/udhayamjobservices" id="hero-insta-btn" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Follow Us</span>
+        </a>
     </section>
 
     <!-- Divider -->
