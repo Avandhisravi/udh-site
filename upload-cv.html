@@ -192,6 +192,32 @@
                                         placeholder="e.g. 25" min="16" max="100" aria-label="Your age">
                                 </div>
                             </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>UK Phone Number *</label>
+                                    <input type="tel" name="Phone" class="form-control" required
+                                        placeholder="+44 7359 941485">
+                                </div>
+                                <div class="form-group">
+                                    <label>UK WhatsApp Number</label>
+                                    <input type="tel" name="UK WhatsApp" class="form-control"
+                                        placeholder="+44 WhatsApp Number">
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label id="nativePhoneLabel">Native Calling Number</label>
+                                    <input type="tel" name="Indian Phone" id="nativePhoneInput" class="form-control"
+                                        placeholder="Calling Number">
+                                </div>
+                                <div class="form-group">
+                                    <label id="nativeWhatsappLabel">Native WhatsApp Number</label>
+                                    <input type="tel" name="Indian WhatsApp" id="nativeWhatsappInput"
+                                        class="form-control" placeholder="WhatsApp Number">
+                                </div>
+                            </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
                                     <label>Native Country *</label>
@@ -286,31 +312,6 @@
                                     placeholder="Name of reference or person in care of">
                             </div>
 
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                <div class="form-group">
-                                    <label>UK Phone Number *</label>
-                                    <input type="tel" name="Phone" class="form-control" required
-                                        placeholder="+44 7359 941485">
-                                </div>
-                                <div class="form-group">
-                                    <label>UK WhatsApp Number</label>
-                                    <input type="tel" name="UK WhatsApp" class="form-control"
-                                        placeholder="+44 WhatsApp Number">
-                                </div>
-                            </div>
-
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                <div class="form-group">
-                                    <label id="nativePhoneLabel">Native Calling Number</label>
-                                    <input type="tel" name="Indian Phone" id="nativePhoneInput" class="form-control"
-                                        placeholder="Calling Number">
-                                </div>
-                                <div class="form-group">
-                                    <label id="nativeWhatsappLabel">Native WhatsApp Number</label>
-                                    <input type="tel" name="Indian WhatsApp" id="nativeWhatsappInput"
-                                        class="form-control" placeholder="WhatsApp Number">
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <label>Email Address</label>
                                 <input type="email" name="Email" class="form-control" placeholder="email@address.com">
